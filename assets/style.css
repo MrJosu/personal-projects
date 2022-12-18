@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  background-color: whitesmoke;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+header {
+  padding: 20px 0 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  align-items: center;
+  background-color: grey;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+}
+nav a {
+ text-decoration: none;
+ padding: 5px 10px;
+ color:aqua;
+ margin-right: 10px;
+ background-image: linear-gradient(270deg,blue 0%, green 100%);
+ background-repeat: no-repeat;
+ background-size: 100% 0.2em;
+ background-position: bottom;
+ transition: all 0.50s ease-in;
+ font-size: 1.2rem;
+}
+nav a:hover {
+  background-size: 100% 100%;
+  color: pink
+}
+nav a:last-child {
+  margin-right: 0;
+}
+.hero-banner
+{
+  background-color: rgb(90, 129, 0);
+  background-image: url("../assets/images/02-hero-bg.jpg") ;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: color-burn;
+  min-height: 30vh;
+  color: pink;
+  padding: 1.5% 6%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align:right;
+}
+.hero-banner div {
+  flex: 0 0 90%;
+}
+.hero-banner h2 {
+  background-color: blue;
+  color: pink;
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 2.3rem;
+  line-height: 1.2;
+  display: inline;
+}
+.page-wrapper {
+  max-width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-section {
+  margin: 25px;
+  padding: 10px 0;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content:space-between;
+}
+.page-section >h2 {
+  flex: 0 0 20%;
+  text-align: right;
+  padding-right: 15px;
+  border-right: 4px solid color red;
+  font-size: 1vw;
+  line-height: 1.1;
+}
+.page-section >div {
+  flex: 0 0 76%
+}
+.page-section p {
+  margin-bottom: 20px;
+}
+.flex-container {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+.flex-item {
+  border:5px solid red;
+  background-color: aqua; /* check this later to see pictures */
+  color: purple;
+  min-height: 150px;
+  max-height: 150px;
+  flex-basis: calc(50% - 1em);
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 20px 0;
+  margin: 0.5em;
+  text-decoration: none;
+  background-blend-mode: soft-light;
+  background-size: 150%;
+  transition: all 0.5s;
+  font-size: 0.9 rem;
+}
+.flex-item:first-child{
+  min-height: 400px;
+  flex-basis: 100%;
+}
+.flex-item:hover {
+  background-color: rgba (0,0,0,0.3);
+}
+.contact address a {
+  color:pink;
+  padding:5px;
+  text-decoration: none;
+  font-style:normal;
+  margin: 0 0.2rem 0.1rem;
+  background-image: linear(270deg,color red 0%, color red 100%);
+}
+.contact address a:hover {
+  color:aquamarine;
+}
+.replacemeone {
+  background-image: url("../assets/images/02-portfolio-1.jpg");
+}
+.replacemetwo {
+  background-image: url("../assets/images/02-portfolio-1.jpg");
+}
+.replacemethree {
+  background-image: url("../assets/images/02-portfolio-1.jpg");
+}
+.replacemefour {
+background-image: url("../assets/images/02-portfolio-1.jpg");
+}
+.replacemefive {
+  background-image: url("../assets/images/02-portfolio-1.jpg");
+  }
+@media screen and (max-width: 1000px) {
+  header {
+    padding: 0 0 10px 0;
+    justify-content: center;
+    text-align: center;
+  }
+  header h1 {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 10vw
+  }
+  header nav {
+    justify-content: center;
+  }
+  .page-section > h2
+  .page-section > div {
+    flex: 0 0 100%;
+  }
+  .page-section > h2 {
+    border-right: none;
+    border-bottom: 4px solid color red;
+    margin-bottom:20px;
+    padding-bottom: 10px;
+    text-align:left;
+    font-size: 7wv;
+  }
+}
+@media screen and (max-width: 720px){
+  .flex-item,
+  .flex-item:first-child{
+    flex-basis:100%;
+    }
+    .flex-item:first-child{
+      min-height: 150px;
+    }
+    .hero-banner {
+      justify-content: center;
+      text-align: center;
+    }
+    .contact address {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
