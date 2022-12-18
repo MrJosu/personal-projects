@@ -10,6 +10,7 @@
   --fourthcolor: rgba(11, 19, 49,1);
   --lightcolor: rgba(238,238,247,1);
   --darkcolor: rgba(0,0,0,1);
+  --mediacolor: rgba(241,255,24,1);
 }
 body {
   margin: 0;
@@ -210,6 +211,8 @@ background-image: url("../images/02-portfolio-3.jpg");
   .flex-item,
   .flex-item:first-child{
     flex-basis:100%;
+    color: var(--mediacolor);
+
     }
     .flex-item:first-child{
       min-height: 150px;
