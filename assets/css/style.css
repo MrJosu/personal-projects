@@ -4,10 +4,12 @@
 }
 :root {
   --primecolor: rgba(68, 88, 118, 1);
-  --secondcolor: rgba(95, 214, 135,1);
-  --thirdcolor: rgba(46, 47, 48, 0.658);
+  --secondcolor: rgba(197, 230, 255,1);
+  --thirdcolor: rgba(19, 159, 136, 0.66);
+  --bannercolor: rgba(90,129,0,1);
   --fourthcolor: rgba(11, 19, 49,1);
-  --fifthcolor: rgba(238,238,247,1);
+  --lightcolor: rgba(238,238,247,1);
+  --darkcolor: rgba(0,0,0,1);
 }
 body {
   margin: 0;
@@ -21,6 +23,16 @@ h1,h2,h3,h4,h5,h6 {
 }
 p {
   margin: 0;
+}
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.personal {
+  display:flex;
+  align-items: center;
 }
 header {
   padding: 15px 10px;
@@ -39,7 +51,7 @@ nav {
 nav a {
  text-decoration: none;
  padding: 5px 10px;
- color: var(--secondcolor);
+ color: var(--darkcolor);
  margin-right: 10px;
  background-image: linear-gradient(270deg,blue 0%, green 100%);
  background-repeat: no-repeat;
@@ -53,18 +65,18 @@ nav a:last-child {
 }
 nav a:hover {
   background-size: 100% 100%;
-  color: yellow;
+  color: var(--lightcolor);
 }
 .hero-banner
 {
-  background-color: rgb(90, 129, 0);
+  background-color: var(--bannercolor);
   background-image: url("../images/02-hero-bg.jpg"), linear-gradient(180deg,var(--thirdcolor) 0%,var(--secondcolor) 50%);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-blend-mode: color-burn;
   min-height: 21vh;
-  color: var(--fifthcolor);
+  color: var(--lightcolor);
   padding: 3% 8%;
   display: flex;
   justify-content: flex-end;
@@ -75,7 +87,7 @@ nav a:hover {
   flex: 0 0 90%;
 }
 .hero-banner h2 {
-  color: var(--secondcolor);
+  color: var(--lightcolor);
   margin: 0;
   padding: 5px 10px;
   font-size: 2rem;
@@ -117,8 +129,8 @@ nav a:hover {
 }
 .flex-item {
   border:5px solid var(--fourthcolor);
-  background-color: var(--primecolor); /* check this later to see pictures */
-  color: var(--fifthcolor);
+  background-color: var(--primecolor);
+  color: var(--lightcolor);
   min-height: 150px;
   max-height: 150px;
   flex-basis: calc(50% - 1em);
@@ -133,23 +145,11 @@ nav a:hover {
   font-size: 1.1rem;
 }
 .flex-item:first-child {
-  min-height: 400px; /* check this later  */
-  flex-basis: 400%;
+  min-height: 500px;
+  flex-basis: 100%;
 }
 .flex-item:hover {
   background-color: rgba(0,0,0,0.25);
-}
-.contact address a {
-  color: var(--thirdcolor);
-  padding:5px;
-  text-decoration: none;
-  font-style:normal;
-  font-size: 18px;
-  margin: 0 0.2rem 0.1rem;
-  background-color: linear(270deg,var(--secondcolor) 0%, var(--secondcolor) 100%);
-}
-.contact address a:hover {
-  color: brown;
 }
 .replacemeone {
   background-image: url("../images/02-portfolio-4.jpg");
@@ -166,15 +166,16 @@ background-image: url("../images/02-portfolio-3.jpg");
 .replacemefive {
   background-image: url("../images/02-run-buddy.jpg");
   }
-.avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-right: 15px;
+.contact address a {
+  color: var(--darkcolor);
+  padding:5px;
+  text-decoration: none;
+  font-style:normal;
+  font-size: 18px;
+  margin: 0 0.2rem 0.1rem;
 }
-.personal {
-  display:flex;
-  align-items: center;
+.contact address a:hover {
+  color: var(--lightcolor);
 }
 @media screen and (max-width: 1000px) {
   header {
@@ -197,14 +198,15 @@ background-image: url("../images/02-portfolio-3.jpg");
   }
   .page-section > h2 {
     border-right: none;
-    border-bottom: 2px solid red; /* check this later  */
-    margin-bottom:20px;
+    border-bottom: 2px solid var(--primecolor);
+    margin-bottom: 20px;
     padding-bottom: 10px;
-    text-align:left;
-    font-size: 3vw;
+    text-align: left;
+    font-size: 1rem;
   }
 }
-@media screen and (max-width: 720px){
+@media screen and (max-width: 720px)
+{
   .flex-item,
   .flex-item:first-child{
     flex-basis:100%;
@@ -219,5 +221,12 @@ background-image: url("../images/02-portfolio-3.jpg");
     .contact address {
       flex-direction: column;
       align-items: flex-start;
+    }
+  }
+  @media screen and (max-width: 400px)
+  {
+    .contact address a
+    {
+    display: block;
     }
   }
